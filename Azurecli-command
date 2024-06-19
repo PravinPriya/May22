@@ -1,0 +1,5 @@
+=============================create azure resource ================
+az group create --name parth --location westus
+az group list
+az group delete --name exampleGroup
+az group show --name 
