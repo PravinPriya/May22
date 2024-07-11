@@ -3,3 +3,7 @@ az group create --name parth --location westus
 az group list
 az group delete --name exampleGroup
 az group show --name 
+az account list
+az account list
+az account list -o table 
+az account show
