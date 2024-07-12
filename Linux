@@ -1,1 +1,33 @@
+/ === Parent directory 
+/root root's home directory
+/home  Normal User directory
+
+total directory ===19
+2 directory / /root /home
+usr have 4 director 
+usr ===1 bin 2 lib 3 lib64 4 sbin
+================================================================
+to check permission of command
+[root@localhost ~]# ls -ld /usr
+drwxr-xr-x. 12 root root 144 Dec 14  2023 /usr
+
+=====================
+du -sh command ka use hm kisi bhi folder ki size check kr skte h
+
+[root@localhost ~]# du -sh /usr
+3.9G	/usr
+=====================================================
+proc ka use process id check krne me kiya jata h
+
+[root@localhost ~]# ls /proc
+1     27    3734  3880  447   4854  521  649  826  acpi           locks
+10    2771  3739  3882  4477  486   522  65   83   asound         mdstat
+1035  2832  3740  3883  448   487   523  66   831  bootconfig     meminfo
+1058  2834  3754  3885  454   489   524  67   833  buddyinfo      misc
+
+======================================
+/dev == it contains all hardware device 
+
+
+
 
