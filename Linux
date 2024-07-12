@@ -28,6 +28,149 @@ proc ka use process id check krne me kiya jata h
 ======================================
 /dev == it contains all hardware device 
 
+=====
+/media ===IT is default point for all the use device
+/mnt within machine it is use to mount any partition network based share network and USB drive as well
+
+/ mnt ka use hm kisi bhi device ko mount krne ke liye krte h sath hi kisi bhi USB device ko attach krne ke liye krte h
+
+=========
+kisi PENDRIVE ko Machine me lgayi h use kha pr search kre kha pr h 
+
+ls /run/media/root
+
+===================================
+pwd == to check present working directory
+ls == to check data list
+touch  == create file
+mkdir == to create directory
+
+
+=============Practical touch command ====
+touch abc /abc /tmp/abc
+is command ka mtlb ki file banana lekin hm file kitne type se kaise bna skte h 
+touch abc == jha pr aap ho vha pr abc name ki file bna dega
+
+touch /abc ==jha pr aap baite ho wha se root me jakar abc name ki file bna dega
+
+--->> single command se miltiple palace pr file bnani h 
+   touch abc /abc /tmp/abc ---abc jha pr ho wha bna dega 2 root me bna dega 3 tmp directory me jakar abc name ki file bna dega
+
+2 second task h ki name same h ravi lekin ravi1 ravi2 ravi3 ...and so on
+    1 method touch ravi1 ravi2 ravi3 ravi4
+    2 method touch ravi{1..4} ===
+    3 mehtod touch ravi{1,2,3,4} 
+me chahta hu ki file odd number me 1 me bane or
+    4 mehtod touch ravi{1..5..2}
+
+[root@localhost ~]# touch ravi{1..5..2}
+[root@localhost ~]# ls
+08:55:44  anaconda-ks.cfg                          hcl     Pictures  Sat
+2024      Desktop                                  IST     Public    Templates
+6         Documents                                Jan     ravi1     Videos
+abc       Downloads                                Music   ravi3     zaq
+AM        google-chrome-stable_current_x86_64.rpm  passwd  ravi5
+[root@localhost ~]# 
+
+[root@localhost ~]# #EVEN me banana h
+[root@localhost ~]# touch ravi{0..10..2}
+[root@localhost ~]# ls
+08:55:44         Documents                                passwd    ravi6
+2024             Downloads                                Pictures  ravi8
+6                google-chrome-stable_current_x86_64.rpm  Public    Sat
+abc              hcl                                      ravi0     Templates
+AM               IST                                      ravi10    Videos
+anaconda-ks.cfg  Jan                                      ravi2     zaq
+Desktop          Music                                    ravi4
+[root@localhost ~]# 
+
+
+[root@localhost ~]# touch {amit,sumit}
+[root@localhost ~]# ls
+08:55:44  anaconda-ks.cfg                          IST       Sat
+2024      Desktop                                  Jan       sumit
+6         Documents                                Music     Templates
+abc       Downloads                                passwd    Videos
+AM        google-chrome-stable_current_x86_64.rpm  Pictures  zaq
+amit      hcl                                      Public
+[root@localhost ~]# 
+
+  touch /tmp/abc{1..5}
+
+===================FOLDER OR DIRECTORY BANANA============
+1 mkdir pravin
+2 multiple folder banaa h
+     mkdir pravin ravi maheshh
+3 folder ke ander hi ander folder banana isko nested folder banana bhi bolte h
+      mkdir -p /a1/a2/a3
+
+=====>>>>>>output check krne ki command
+
+    [root@localhost a3]# tree /a1
+/a1
+└── a2
+    └── a3
+
+2 directories, 0 files
+[root@localhost a3]# ls -R /a1
+/a1:
+a2
+
+/a1/a2:
+a3
+
+====================cd command use ===
+cd .. one level back
+cd ../.. two level back
+cd ../../.. three level back
+cd - jha se aap aye ho vhi pr vapas lekar chla jayega
+cd    main root me vapas lekar chla jayega
+cd . current location 
+
+ls or ls . donon hi same commnad h 
+=============Tree and resurcive command =====
+
+1. tree is command ka use folder ke ander folder kaise bnae h bta deta h 
+2. ls -R bhi smae hi lekin tree kuch jyada sunder command h 
+[root@localhost ~]# tree a1
+a1
+└── a2
+    └── a3
+        └── a4
+            └── a5
+                └── a6
+
+5 directories, 0 files
+[root@localhost ~]# ls -R a1
+a1:
+a2
+
+a1/a2:
+a3
+
+a1/a2/a3:
+a4
+
+a1/a2/a3/a4:
+a5
+
+a1/a2/a3/a4/a5:
+a6
+
+a1/a2/a3/a4/a5/a6:
+[root@localhost ~]# 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
