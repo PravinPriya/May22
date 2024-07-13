@@ -1,3 +1,5 @@
+################Azure implicit dependancy pratical ###########
+
 resource "azurerm_resource_group" "parthyogi234" {
   name = "parth2345674"
   location = "West Europe"
@@ -11,3 +13,4 @@ resource "azurerm_storage_account" "yogipravin" {
   account_replication_type = "LRS"
  
 }
+
